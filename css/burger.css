@@ -50,6 +50,7 @@
     width: clamp(200px, 50vw, 400px);
     z-index: 1;
     opacity: 0.8;
+    height: auto;
   }
   header > nav li > a:after {
     content: "";
