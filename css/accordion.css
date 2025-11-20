@@ -1,0 +1,34 @@
+.accordion {
+  display: grid;
+  grid-template-columns: min(100%, 65ch);
+  place-content: center;
+  gap: 2px;
+}
+
+summary {
+  background: #25387b;
+  cursor: pointer;
+  padding: 1rem;
+}
+/* Fjern eksisterende pil */
+summary::marker {
+  content: none;
+}
+summary::after {
+  content: "\2192";
+  font-family: system-ui;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+[open] summary::after {
+  content: "–";
+}
+
+.accordion-content {
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  margin-top: 0.5rem;
+  animation: slideDown 0.5s ease-out;
+  border-radius: 0 0 8px 8px;
+}
