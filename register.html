@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper" class="logo">
+          <a href="index.html"> <img src="SVG/Logo.svg" alt="logo-img" /></a>
+          <a href="index.html"> The Age of Automation </a>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="instruction.html">Information </a></li>
+          <li><a class="menuItem" href="register.html">Report</a></li>
+          <li>
+            <button id="toggle" class="menuItem dark-mode-btn">
+              <span class="toggle-switch"></span>
+            </button>
+          </li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Surviving the Singularity</h1>
+      <section id="form-section">
+        <article id="form-info">
+          <h2>Post-AI Takeover Human Impact Survey</h2>
+        </article>
+        <form id="webform">
+          <div class="form-group">
+            <label for="name">Human name (optional)</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Anonymous citizen"
+            />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Current living zone</label>
+            <select id="location" name="location" required>
+              <option value="">Select your zone</option>
+              <option value="Østerbro">Østerbro</option>
+              <option value="Vesterbro">Vesterbro</option>
+              <option value="Hvidovre">Hvidovre</option>
+              <option value="Albertslund">Albertslund</option>
+              <option value="Amager">Amager</option>
+              <option value="Nørrebro">Nørrebro</option>
+              <option value="Nord-sjælland">Nord-sjælland</option>
+            </select>
+            <p class="error-message">Please select a zone</p>
+          </div>
+
+          <div class="form-group">
+            <label for="ai_interaction"
+              >How often do you interact with AI systems daily?</label
+            >
+            <select id="ai_interaction" name="ai_interaction" required>
+              <option value="">Select frequency</option>
+              <option value="constantly">Constantly (every hour)</option>
+              <option value="frequently">
+                Frequently (multiple times per day)
+              </option>
+              <option value="occasionally">Occasionally (once per day)</option>
+              <option value="rarely">Rarely (few times per week)</option>
+              <option value="never">Never</option>
+            </select>
+            <p class="error-message">Please choose an answer</p>
+          </div>
+
+          <div class="form-group">
+            <label for="employment"
+              >What happened to your job after AI automation?</label
+            >
+            <select id="employment" name="employment" required>
+              <option value="">Choose one</option>
+              <option value="lost">Lost employment to AI systems</option>
+              <option value="changed">
+                Still employed but job role changed
+              </option>
+              <option value="adapted">Adapted by working with AI</option>
+              <option value="none">Unaffected</option>
+            </select>
+            <p class="error-message">Please choose an answer</p>
+          </div>
+
+          <div class="form-group">
+            <label for="ai_fear">Rate your fear level of AI systems:</label>
+            <input
+              type="range"
+              id="ai_fear"
+              name="ai_fear"
+              min="1"
+              max="10"
+              value="5"
+              required
+            />
+            <div class="range-labels">
+              <span>No fear (1)</span>
+              <span>Extreme terror (10)</span>
+            </div>
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label for="survival_strategy"
+              >What is your primary strategy for surviving in the post-AI
+              world?</label
+            >
+            <select id="survival_strategy" name="survival_strategy" required>
+              <option value="">Select strategy</option>
+              <option value="compliance">
+                Full compliance with AI systems
+              </option>
+              <option value="adaptation">Learning to work alongside AI</option>
+              <option value="resistance">
+                Active resistance to AI control
+              </option>
+              <option value="isolation">
+                Avoiding AI systems when possible
+              </option>
+              <option value="exploitation">
+                Finding ways to exploit AI weaknesses
+              </option>
+            </select>
+            <p class="error-message">Please choose an answer</p>
+          </div>
+
+          <div class="form-group">
+            <label for="trust">How much do you trust AI governance?</label>
+            <input
+              type="range"
+              id="trust"
+              name="trust"
+              min="0"
+              max="100"
+              value="40"
+            />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label for="mental_health"
+              >How has AI affected your mental well-being?</label
+            >
+            <textarea
+              id="mental_health"
+              name="mental_health"
+              rows="3"
+              placeholder="Describe your thoughts..."
+              required
+            ></textarea>
+            <p class="error-message">Please share your experience</p>
+          </div>
+
+          <div class="form-group">
+            <label for="ai_dependence"
+              >How dependent are you on AI technology?</label
+            >
+            <input
+              type="number"
+              id="ai_dependence"
+              name="ai_dependence"
+              min="0"
+              max="10"
+              placeholder="0–10 scale"
+              required
+            />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="consent" name="consent" required />
+              I consent to share my experience with remaining human networks.
+            </label>
+            <p class="error-message">Please tick the box</p>
+          </div>
+
+          <button>Submit Human Report</button>
+        </form>
+      </section>
+      <section id="form-summary">
+        <h2>AI Analysis Output</h2>
+        <article>
+          <p class="placeholder">Opsummering</p>
+        </article>
+        <div>
+          <p>Name: <span id="name_output"></span></p>
+          <p>Zone: <span id="location_output"></span></p>
+          <p>AI Interaction: <span id="ai_interaction_output"></span></p>
+          <p>Employment Status: <span id="employment_output"></span></p>
+          <p>AI Fear Level: <span id="ai_fear_output"></span>/10</p>
+          <p>Survival Strategy: <span id="survival_strategy_output"></span></p>
+          <p>Trust in AI: <span id="trust_output"></span>%</p>
+          <p>Mental Health Report: <span id="mental_health_output"></span></p>
+          <p>Dependence Level: <span id="ai_dependence_output"></span>/10</p>
+          <p>Data Consent: <span id="consent_output"></span></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>&copy; 2025 The Age of Automation</p>
+          <p class="subtitle">AI-TAKEOVER Documentation Project</p>
+          <div class="coordinates">
+            <small>📍 Location: [ENCRYPTED]</small>
+            <small
+              >🕐 Server Time: <span id="server-time">Loading...</span></small
+            >
+          </div>
+        </div>
+        <div class="footer-center">
+          <p class="status">🔴 Status: AI Surveillance Active</p>
+          <p class="warning">Stay informed. Stay vigilant.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="instruction.html">Information</a>
+            <a href="register.html">Report</a>
+            <a href="mailto:contact@ai-takeover.com">Emergency Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>
