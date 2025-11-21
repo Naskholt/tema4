@@ -22,6 +22,7 @@
 
 [popover]::backdrop {
   background: #0008;
+  backdrop-filter: blur(5px);
 }
 [popover] h3 {
   margin-bottom: 15px;
