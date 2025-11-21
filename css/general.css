@@ -55,6 +55,7 @@ h1 {
 .sub {
   font-size: var(--font-sub1-size);
   color: whitesmoke;
+  font-weight: 450;
 }
 
 h2 {
